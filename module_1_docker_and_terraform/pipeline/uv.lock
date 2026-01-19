@@ -1156,7 +1156,9 @@ dependencies = [
 
 [package.dev-dependencies]
 dev = [
+    { name = "ipykernel" },
     { name = "jupyter" },
+    { name = "jupyterlab" },
     { name = "pgcli" },
 ]
 
@@ -1172,7 +1174,9 @@ requires-dist = [
 
 [package.metadata.requires-dev]
 dev = [
+    { name = "ipykernel", specifier = ">=7.1.0" },
     { name = "jupyter", specifier = ">=1.1.1" },
+    { name = "jupyterlab", specifier = ">=4.5.2" },
     { name = "pgcli", specifier = ">=4.4.0" },
 ]
 
