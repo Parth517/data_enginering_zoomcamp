@@ -8,14 +8,14 @@ terraform {
 }
 
 provider "google" {
-  project = "triple-acre-484506-h5"
-  region  = "us-central1"
+  project = var.project
+  region  = var.region
 }
 
 
 resource "google_storage_bucket" "demo-bucket" {
-  name          = "triple-acre-484506-h5-no-age-enabled-bucket"
-  location      = "US"
+  name          = var.gcs_bucket_name
+  location      = var.location
   force_destroy = true
 
   lifecycle_rule {
@@ -24,7 +24,13 @@ resource "google_storage_bucket" "demo-bucket" {
     }
     condition {
       days_since_noncurrent_time = 85
-      send_age_if_zero = false
+      send_age_if_zero           = false
     }
   }
+}
+
+
+resource "google_bigquery_dataset" "dataset" {
+  dataset_id = var.bq_dataset_name
+  location = var.location
 }
