@@ -4,3 +4,10 @@
 __pycache__/
 *.py[codz]
 *$py.class
+terraform_sa.json
+notes
+.gcp/
+.terraform/
+*.tfstate
+*.tfstate.backup
+.terraform.lock.hc
