@@ -1,0 +1,7 @@
+id: placeholder
+namespace: git.zoomcamp
+
+tasks:
+  - id: log
+    type: io.kestra.plugin.core.log.Log
+    message: "Placeholder flow"
