@@ -13,3 +13,11 @@ notes
 .terraform.lock.hc
 
 .env
+
+.terraform/
+*.tfstate*
+__pycache__/
+.venv/
+node_modules/
+*.parquet
+*.csv
