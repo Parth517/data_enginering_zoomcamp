@@ -12,14 +12,7 @@ payment_types as (
 
 cleaned_and_enriched as (
     select
-       to_hex(md5(format(
-    '%s|%s|%s|%s',
-    cast(u.vendor_id as string),
-    cast(u.pickup_datetime as string),
-    cast(u.pu_location_id as string),
-    cast(u.service_type as string)
-))) as trip_id,
-
+     {{ dbt_utils.generate_surrogate_key(['u.vendor_id', 'u.pickup_datetime', 'u.pu_location_id', 'u.service_type']) }} as trip_id,
         -- Identifiers
         u.vendor_id,
         u.service_type,
