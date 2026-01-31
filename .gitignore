@@ -25,3 +25,8 @@ examples*
 logs/
 .env
 airflow.db
+
+target/
+dbt_packages/
+logs/
+profiles.yml
