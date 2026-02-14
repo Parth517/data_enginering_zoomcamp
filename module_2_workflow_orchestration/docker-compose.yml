@@ -77,9 +77,9 @@ services:
           tasks:
             tmpDir:
               path: /tmp/kestra-wd/tmp
-          url: http://localhost:8080/
+          url: http://localhost:8090/
     ports:
-      - "8080:8080"
+      - "8090:8080"
       - "8081:8081"
     depends_on:
       kestra_postgres:

@@ -30,3 +30,7 @@ target/
 dbt_packages/
 logs/
 profiles.yml
+.bruin.yml
+logs/runs
+logs/*.log
+*.py[cod]
